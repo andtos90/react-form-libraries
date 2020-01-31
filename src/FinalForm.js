@@ -32,7 +32,7 @@ const FinalForm = () => {
             style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}
           >
             {Array.from(Array(NUMBER_OF_FIELDS).keys()).map(i => (
-              <Field name={`text-${i}`}>
+              <Field key={`text-${i}`} name={`text-${i}`}>
                 {({ input, meta }) => (
                   <FormField
                     field={input}

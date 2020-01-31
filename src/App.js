@@ -6,24 +6,26 @@ import './App.css';
 import FormikForm from './FormikForm';
 import FinalForm from './FinalForm';
 
+const BASEPATH = '/react-form-libraries';
+
 function App() {
   return (
     <div className="App">
       <nav className="App-header">
-        <Link className="App-link" to="/">
+        <Link className="App-link" to={BASEPATH}>
           Home
         </Link>
-        <Link className="App-link" to="formik">
+        <Link className="App-link" to={`${BASEPATH}/formik`}>
           Formik
         </Link>
-        <Link className="App-link" to="final-form">
+        <Link className="App-link" to={`${BASEPATH}/final-form`}>
           Final Form
         </Link>
       </nav>
       <Router>
-        <Home path="/" />
-        <FormikForm path="/formik" />
-        <FinalForm path="/final-form" />
+        <Home path={BASEPATH} />
+        <FormikForm path={`${BASEPATH}/formik`} />
+        <FinalForm path={`${BASEPATH}/final-form`} />
       </Router>
     </div>
   );
